@@ -3,3 +3,6 @@
 ### The candy crush app contains authentication using auth0, and contains a the candy crush game with user statistics and a global leaderboard
 
  the app is not suited for mobile or tablet
+![](/s3.png)
+![](/s2.png)
+![](/s1.png)
