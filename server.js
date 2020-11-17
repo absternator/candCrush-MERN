@@ -39,15 +39,15 @@ app.use("/scores", scoresRouter);
 /***********Configure front end********* */
 // "heroku-postbuild" : "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
 // if in production
-// if (process.env.NODE_ENV === "production") {
-//   //serve up static files
-//   app.use(express.static("client/build"));
+if (process.env.NODE_ENV === "production") {
+  //serve up static files
+  app.use(express.static("client/build"));
 
-//   // connect index.html
-//   app.get("*", (req, res) => {
-//     res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
-//   });
-// }
+  // connect index.html
+  app.get("*", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+  });
+}
 
 // listen om port 5000
 const port = process.env.PORT || 5000;
